@@ -31,6 +31,9 @@ class SiteController extends Controller
      */
     public function beforeAction($action)
     {
+        if($this->action->id !== 'index'){
+            $this->checkSecret();
+        }
         $this->checkSecret();
         return parent::beforeAction($action);
     }
@@ -42,6 +45,7 @@ class SiteController extends Controller
     public function actionIndex(): array
     {
         return [
+            'application' => 'Last Twit',
             'version' => '1.0.0',
         ];
     }
