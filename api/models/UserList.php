@@ -44,6 +44,11 @@ class UserList extends ActiveRecord
         ];
     }
 
+    /**
+     * @param string $id
+     * @return ActiveDataProvider
+     * @throws InternalErrorException
+     */
     public static function getProviderById(string $id): ActiveDataProvider
     {
         $query = self::find()->where(['id'=>$id]);

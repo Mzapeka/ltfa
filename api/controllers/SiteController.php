@@ -12,32 +12,32 @@ use yii\rest\Controller;
 
 /**
  * Site controller
- * @property Twitter $twitter
+ *
  */
 class SiteController extends Controller
 {
 
+    /**
+     * @var Twitter $twitter
+     */
     private $twitter;
 
+    /**
+     * @param $action
+     * @return bool
+     * @throws MissingParameterException
+     * @throws WrongSecretException
+     * @throws \yii\web\BadRequestHttpException
+     */
     public function beforeAction($action)
     {
         $this->checkSecret();
         return parent::beforeAction($action);
     }
 
+
     /**
-     * @SWG\Get(
-     *     path="/",
-     *     tags={"Info"},
-     *     @SWG\Response(
-     *         response="200",
-     *         description="API version",
-     *         @SWG\Schema(
-     *             type="object",
-     *             @SWG\Property(property="version", type="string")
-     *         ),
-     *     )
-     * )
+     * @return array
      */
     public function actionIndex(): array
     {
@@ -45,7 +45,11 @@ class SiteController extends Controller
             'version' => '1.0.0',
         ];
     }
-    
+
+    /**
+     * @throws InternalErrorException
+     * @throws MissingParameterException
+     */
     public function actionAdd(): void
     {
         $this->isUserSet();
@@ -64,12 +68,24 @@ class SiteController extends Controller
         return;
     }
 
+    /**
+     * @param $id
+     * @return MapDataProvider
+     * @throws InternalErrorException
+     */
     public function actionFeed($id)
     {
         $this->twitter = new Twitter();
         return new MapDataProvider(UserList::getProviderById($id),[$this, 'serializeLastTwits']);
     }
 
+    /**
+     * @param $id
+     * @param $user
+     * @throws InternalErrorException
+     * @throws MissingParameterException
+     * @throws \Throwable
+     */
     public function actionRemove($id, $user): void
     {
         $this->isUserSet();
@@ -85,6 +101,10 @@ class SiteController extends Controller
         return;
     }
 
+    /**
+     * @throws MissingParameterException
+     * @throws WrongSecretException
+     */
     private function checkSecret(): void
     {
         $id = Yii::$app->getRequest()->get('id');
@@ -99,6 +119,9 @@ class SiteController extends Controller
         }
     }
 
+    /**
+     * @throws MissingParameterException
+     */
     private function isUserSet(): void
     {
         $user = Yii::$app->getRequest()->get('user');
@@ -107,6 +130,11 @@ class SiteController extends Controller
         };
     }
 
+    /**
+     * @param UserList $user
+     * @return array
+     * @throws InternalErrorException
+     */
     public function serializeLastTwits(UserList $user): array
     {
         $this->twitter->getLastUserTwit($user->user);

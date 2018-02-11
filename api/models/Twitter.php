@@ -15,11 +15,22 @@ use Yii;
 use yii\helpers\ArrayHelper;
 
 
+/**
+ * Class Twitter
+ * @package api\models
+ */
 class Twitter extends TwitterOAuth
 {
 
+    /**
+     * @var
+     */
     private $lastUserTwit;
 
+    /**
+     * Twitter constructor.
+     * @throws InternalErrorException
+     */
     public function __construct()
     {
         try{
@@ -35,6 +46,10 @@ class Twitter extends TwitterOAuth
     }
 
 
+    /**
+     * @return bool
+     * @throws InternalErrorException
+     */
     private function isSuccessRequest(){
         if($this->getLastHttpCode() != 200){
             throw new InternalErrorException();
@@ -42,6 +57,11 @@ class Twitter extends TwitterOAuth
         return true;
     }
 
+    /**
+     * @param string $user
+     * @return Twitter
+     * @throws InternalErrorException
+     */
     public function getLastUserTwit(string $user): self
     {
         $content = $this->get("search/tweets", ['q'=>'from:'.$user, 'result_type' => 'recent', 'count'=>1]);
@@ -55,11 +75,17 @@ class Twitter extends TwitterOAuth
         }
     }
 
+    /**
+     * @return string
+     */
     public function getTwitText():string
     {
         return ArrayHelper::getValue($this->lastUserTwit, 'statuses.0.text','');
     }
 
+    /**
+     * @return array
+     */
     public function getHashtags()
     {
         $hashTagArray = ArrayHelper::getValue($this->lastUserTwit, 'statuses.0.entities.hashtags',[]);
