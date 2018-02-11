@@ -34,7 +34,6 @@ class SiteController extends Controller
         if($this->action->id !== 'index'){
             $this->checkSecret();
         }
-        $this->checkSecret();
         return parent::beforeAction($action);
     }
 
