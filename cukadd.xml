@@ -1,0 +1,50 @@
+<RestClientRequest>
+  <option name="biscuits">
+    <list />
+  </option>
+  <option name="httpMethod" value="GET" />
+  <option name="urlBase" value="http://api.ltfa.dev" />
+  <option name="urlPath" value="/feed" />
+  <option name="headers">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="Accept" />
+        <option name="value" value="application/json" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Cache-Control" />
+        <option name="value" value="no-cache" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Content-Type" />
+        <option name="value" value="application/json" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Accept-Charset" />
+        <option name="value" value="UTF-8" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parameters">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="secret" />
+        <option name="value" value="2abfaba0f933d3f165d12157aac7d8dc25db3ad7" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="id" />
+        <option name="value" value="WBYX1TLPRWJ7NSV36LCPP2OZFH6AE6LM" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="user" />
+        <option name="value" value="MarkCukerberg1" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parametersEnabled" value="true" />
+  <option name="haveTextToSend" value="false" />
+  <option name="haveFileToSend" value="false" />
+  <option name="isFileUpload" value="false" />
+  <option name="textToSend" value="" />
+  <option name="filesToSend" value="" />
+</RestClientRequest>

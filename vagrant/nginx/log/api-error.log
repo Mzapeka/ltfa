@@ -1,0 +1,132 @@
+2018/02/09 19:56:57 [error] 1635#1635: *17 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /app/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#1 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\web\NotFoundHttpException: Page not found. in /app/vendor/yiisoft/yii2/web/Request.php:281
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Application.php(82): yii\web\Request->resolve()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /app/api/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'USER' => 'vagrant',
+    'HOME' => '/home/vagrant',
+    'HTTP_UPGRADE_INS" while reading upstream, client: 192.168.83.1, server: api.ltfa.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.ltfa.dev"
+2018/02/09 19:58:43 [error] 1635#1635: *19 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /app/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#1 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\web\NotFoundHttpException: Page not found. in /app/vendor/yiisoft/yii2/web/Request.php:281
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Application.php(82): yii\web\Request->resolve()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /app/api/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'USER' => 'vagrant',
+    'HOME' => '/home/vagrant',
+    'HTTP_CACHE_CONTR" while reading upstream, client: 192.168.83.1, server: api.ltfa.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.ltfa.dev"
+2018/02/09 19:58:45 [error] 1635#1635: *19 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /app/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#1 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\web\NotFoundHttpException: Page not found. in /app/vendor/yiisoft/yii2/web/Request.php:281
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Application.php(82): yii\web\Request->resolve()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /app/api/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'USER' => 'vagrant',
+    'HOME' => '/home/vagrant',
+    'HTTP_CACHE_CONTR" while reading upstream, client: 192.168.83.1, server: api.ltfa.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.ltfa.dev"
+2018/02/09 20:29:59 [error] 1635#1635: *22 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidConfigException: User::identityClass must be set. in /app/vendor/yiisoft/yii2/web/User.php:163
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/BaseObject.php(108): yii\web\User->init()
+#1 [internal function]: yii\base\BaseObject->__construct(Array)
+#2 /app/vendor/yiisoft/yii2/di/Container.php(375): ReflectionClass->newInstanceArgs(Array)
+#3 /app/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\web\\User', Array, Array)
+#4 /app/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\web\\User', Array, Array)
+#5 /app/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(724): yii\di\ServiceL" while reading upstream, client: 192.168.83.1, server: api.ltfa.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.ltfa.dev"
+2018/02/09 20:29:59 [error] 1635#1635: *22 FastCGI sent in stderr: "ocator->get('user', true)
+#7 /app/vendor/yiisoft/yii2/di/Instance.php(164): yii\base\Module->get('user')
+#8 /app/vendor/yiisoft/yii2/di/Instance.php(137): yii\di\Instance->get(NULL)
+#9 /app/vendor/yiisoft/yii2/filters/AccessControl.php(102): yi" while reading upstream, client: 192.168.83.1, server: api.ltfa.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.ltfa.dev"
+2018/02/09 20:45:05 [error] 1635#1635: *24 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidConfigException: User::identityClass must be set. in /app/vendor/yiisoft/yii2/web/User.php:163
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/BaseObject.php(108): yii\web\User->init()
+#1 [internal function]: yii\base\BaseObject->__construct(Array)
+#2 /app/vendor/yiisoft/yii2/di/Container.php(375): ReflectionClass->newInstanceArgs(Array)
+#3 /app/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\web\\User', Array, Array)
+#4 /app/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\web\\User', Array, Array)
+#5 /app/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(724): yii\di\ServiceL" while reading upstream, client: 192.168.83.1, server: api.ltfa.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.ltfa.dev"
+2018/02/09 20:45:05 [error] 1635#1635: *24 FastCGI sent in stderr: "ocator->get('user', true)
+#7 /app/vendor/yiisoft/yii2/di/Instance.php(164): yii\base\Module->get('user')
+#8 /app/vendor/yiisoft/yii2/di/Instance.php(137): yii\di\Instance->get(NULL)
+#9 /app/vendor/yiisoft/yii2/filters/AccessControl.php(102): yi" while reading upstream, client: 192.168.83.1, server: api.ltfa.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.ltfa.dev"
+2018/02/09 20:51:38 [error] 1635#1635: *26 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request: site/error in /app/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#4 {main}
+Previous exception:
+yii\web\NotFoundHttpException: Page not found. in /app/vendor/yiisoft/yii2/web/Request.php:281
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Application.php(82): yii\web\Request->resolve()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /app/api/web/index.php(17): yii\base\Application->run()
+#" while reading upstream, client: 192.168.83.1, server: api.ltfa.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.ltfa.dev"
+2018/02/10 12:28:04 [error] 1741#1741: *5 FastCGI sent in stderr: "PHP message: PHP Notice:  Trying to get property of non-object in /app/api/config/main.php on line 44" while reading response header from upstream, client: 192.168.83.1, server: api.ltfa.dev, request: "GET /remove HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.ltfa.dev"
+2018/02/10 13:24:38 [error] 1741#1741: *57 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '$response' (T_VARIABLE) in /app/api/config/main.php on line 45" while reading response header from upstream, client: 192.168.83.1, server: api.ltfa.dev, request: "GET /remove?secret=3dfb3e37b62f0f13ceca0dfa87a860b007a29e73&id=WBYX1TLPRWJ7NSV36LCPP2OZFH6AE6LM&name=elonmusk1 HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.ltfa.dev"
+2018/02/10 13:24:52 [error] 1741#1741: *59 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\UnknownPropertyException: Getting unknown property: yii\web\Response::status in /app/vendor/yiisoft/yii2/base/Component.php:148
+Stack trace:
+#0 /app/api/config/main.php(45): yii\base\Component->__get('status')
+#1 [internal function]: {closure}(Object(yii\base\Event))
+#2 /app/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Object(Closure), Object(yii\base\Event))
+#3 /app/vendor/yiisoft/yii2/web/Response.php(336): yii\base\Component->trigger('beforeSend')
+#4 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(124): yii\web\Response->send()
+#5 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(api\exceptions\WrongSecretException))
+#6 [internal function]: yii\base\ErrorHandler->handleException(Object(api\exceptions\WrongSecretException))
+#7 {main}
+Previous exception:
+api\exceptions\WrongSecretException: access denied in /app/api/controllers/SiteController.php:75
+Stack trace:
+#0 /app/api/c" while reading upstream, client: 192.168.83.1, server: api.ltfa.dev, request: "GET /remove?secret=3dfb3e37b62f0f13ceca0dfa87a860b007a29e73&id=WBYX1TLPRWJ7NSV36LCPP2OZFH6AE6LM&name=elonmusk1 HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.ltfa.dev"
+2018/02/10 13:25:13 [error] 1741#1741: *61 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\UnknownPropertyException: Getting unknown property: yii\web\Response::status in /app/vendor/yiisoft/yii2/base/Component.php:148
+Stack trace:
+#0 /app/api/config/main.php(45): yii\base\Component->__get('status')
+#1 [internal function]: {closure}(Object(yii\base\Event))
+#2 /app/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Object(Closure), Object(yii\base\Event))
+#3 /app/vendor/yiisoft/yii2/web/Response.php(336): yii\base\Component->trigger('beforeSend')
+#4 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(124): yii\web\Response->send()
+#5 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(api\exceptions\WrongSecretException))
+#6 [internal function]: yii\base\ErrorHandler->handleException(Object(api\exceptions\WrongSecretException))
+#7 {main}
+Previous exception:
+api\exceptions\WrongSecretException: access denied in /app/api/controllers/SiteController.php:75
+Stack" while reading upstream, client: 192.168.83.1, server: api.ltfa.dev, request: "GET /remove?secret=3dfb3e37b62f0f13ceca0dfa87a860b007a29e73&id=WBYX1TLPRWJ7NSV36LCPP2OZFH6AE6LM&name=elonmusk1 HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.ltfa.dev"
+2018/02/10 13:25:13 [error] 1741#1741: *61 FastCGI sent in stderr: "trace:
+#0 /app/api/c" while reading upstream, client: 192.168.83.1, server: api.ltfa.dev, request: "GET /remove?secret=3dfb3e37b62f0f13ceca0dfa87a860b007a29e73&id=WBYX1TLPRWJ7NSV36LCPP2OZFH6AE6LM&name=elonmusk1 HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.ltfa.dev"
+2018/02/10 13:26:32 [error] 1741#1741: *65 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: status in /app/api/config/main.php on line 45" while reading response header from upstream, client: 192.168.83.1, server: api.ltfa.dev, request: "GET /remove?secret=3dfb3e37b62f0f13ceca0dfa87a860b007a29e73&id=WBYX1TLPRWJ7NSV36LCPP2OZFH6AE6LM&name=elonmusk HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.ltfa.dev"
+2018/02/10 13:30:50 [error] 1741#1741: *69 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: status in /app/api/config/main.php on line 45" while reading response header from upstream, client: 192.168.83.1, server: api.ltfa.dev, request: "GET /remove?secret=3dfb3e37b62f0f13ceca0dfa87a860b007a29e73&id=WBYX1TLPRWJ7NSV36LCPP2OZFH6AE6LM&name=elonmusk1 HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.ltfa.dev"
